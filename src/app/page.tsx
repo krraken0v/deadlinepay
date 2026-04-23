@@ -1,65 +1,83 @@
-import Image from "next/image";
-
+import Header from "./components/Header/header";
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      <div className="bg-bg-main w-screen h-screen">
+        <Header></Header>
+        <div>
+          <h1 className="text-text-primary text-9x1 text-center pt-5">
+            PAY TRACK
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <h2 className="text-text-secondary text-center mt-2 text-lg">
+            Take control of your business payments and deadlines Stop losing
+            money due to missed invoices and forgotten due dates. Track
+            everything in one place.
+          </h2>
+          <p className="text-text-secondary text-center text-lg">
+            Built for freelancers, startups, and small businesses who want full
+            visibility over their finances without complex accounting tools.
           </p>
+          <div className="mt-4">
+            <p className="text-text-secondary text-center">Our Features</p>
+            <ul className="grid grid-cols-3 grid-rows-2 gap-7 p-7">
+              <li className="text-text-secondary text-center  bg-bg-card h-50 p-4 rounded hover:scale-105 duration-200 transition-all  cursor-pointer">
+                <p className="text-center text-text-secondary text-md">
+                  💸 Track all your invoices
+                </p>
+                <p>
+                  Keep all your invoices organized in one place and always know
+                  who owes you money.
+                </p>
+              </li>
+              <li className="text-text-secondary text-md text-center bg-bg-card p-4 rounded hover:scale-105 duration-200 transition-all cursor-pointer">
+                <p className="text-center text-text-secondary text-md">
+                  ⏰ Never miss a deadline
+                </p>
+                <p>
+                  Get clear visibility on upcoming and overdue payments so
+                  nothing slips through the cracks.
+                </p>
+              </li>
+              <li className="text-text-secondary text-md text-center bg-bg-card p-4 rounded hover:scale-105 duration-200 transition-all cursor-pointer ">
+                <p className="text-center text-text-secondary text-md">
+                  📊 Real-time financial overview
+                </p>
+                <p>
+                  See how much you expect to receive, what’s overdue, and what
+                  needs attention right now.
+                </p>
+              </li>
+              <li className="text-text-secondary text-md text-center bg-bg-card p-4 rounded hover:scale-105 duration-200 transition-all cursor-pointer ">
+                <p className="text-center text-text-secondary text-md">
+                  🔄 Partial payments support
+                </p>
+                <p>
+                  Track payments over time and always know the remaining
+                  balance.
+                </p>
+              </li>
+              <li className="text-text-secondary text-md text-center bg-bg-card p-4 rounded hover:scale-105 duration-200 transition-all cursor-pointer ">
+                <p className="text-center text-text-secondary text-md">
+                  🤖 AI-powered insights
+                </p>
+                <p>
+                  Ask questions like: “Which invoices are overdue?” “Who owes me
+                  the most?” “What needs attention this week?”
+                </p>
+              </li>
+              <li className="text-text-secondary text-md text-center bg-bg-card p-4 rounded hover:scale-105 duration-200 transition-all cursor-pointer ">
+                <p className="text-center text-text-secondary text-md">
+                  ⚡ Simple and fast
+                </p>
+                <p>No complex accounting knowledge needed. Start in minutes.</p>
+              </li>
+            </ul>
+          </div>
+          <button className="text-text-secondary bg-bg-card px-32 py-3 cursor-pointer rounded block text-center mx-auto transition-all duration-200 hover:scale-105">
+            Try it now
+          </button>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+    </>
   );
 }
