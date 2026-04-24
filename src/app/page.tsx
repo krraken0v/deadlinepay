@@ -1,4 +1,5 @@
 import Header from "./components/Header/header";
+import Link from "next/link";
 export default function Home() {
   return (
     <>
@@ -73,9 +74,11 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <button className="text-text-secondary bg-bg-card px-32 py-3 cursor-pointer rounded block text-center mx-auto transition-all duration-200 hover:scale-105">
-            Try it now
-          </button>
+          <Link href="/register">
+            <button className="text-text-secondary bg-bg-card px-32 py-3 cursor-pointer rounded block text-center mx-auto transition-all duration-200 hover:scale-105">
+              Try it now
+            </button>
+          </Link>
         </div>
       </div>
     </>
